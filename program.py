@@ -18,5 +18,19 @@ def count_characters():
             characters[letter] = 1
         else:
             characters[letter] += 1
-    print(characters)
-count_characters()
+    return characters
+def sort_on(dict):
+    return dict["num"]
+def report():
+    characters_list = []
+    charac = count_characters()
+    for character in charac:
+        if character.isalpha():
+            characters_list.append({"char": character, "num": charac[character]})
+    characters_list.sort(reverse=True, key=sort_on)
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(len(wordcount()),  "words were found in the document")
+    for dicti in characters_list:
+        print(f"The '{dicti['char']}' character was found {dicti['num']} times" )
+    print("--- End report ---")
+report()
