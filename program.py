@@ -1,5 +1,5 @@
 def book():
-    with open("books/frankenstein.txt") as f:
+    with open("books/book.txt") as f:
         file_content = f.read()
         return file_content
 
