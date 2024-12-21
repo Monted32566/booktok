@@ -4,7 +4,6 @@ def book():
         return file_content
 
 def get_word_count():
-    count = 0
     content = book()
     words = content.split()
     return words
