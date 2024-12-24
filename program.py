@@ -29,7 +29,7 @@ def report():
         if character.isalpha():
             characters_list.append({"char": character, "num": charac[character]})
     characters_list.sort(reverse=True, key=sort_on)
-    print("--- Begin report of books/frankenstein.txt ---")
+    print("--- Begin report of book ---")
     print(len(get_word_count()),  "words were found in the document")
     for dicti in characters_list:
         print(f"The '{dicti['char']}' character was found {dicti['num']} times" )
